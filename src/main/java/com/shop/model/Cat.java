@@ -1,5 +1,7 @@
 package com.shop.model;
 
+import javax.annotation.PreDestroy;
+
 public class Cat {
     private String name;
     private String description;
@@ -25,5 +27,10 @@ public class Cat {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @PreDestroy
+    public void cleanUp(){
+
     }
 }

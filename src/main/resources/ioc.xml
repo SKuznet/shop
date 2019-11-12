@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="cat" class="com.shop.model.Cat">
+    <bean id="cat" class="com.shop.model.Cat" scope="session" destroy-method="getName">
         <constructor-arg name="name" value="BarsikWithContruct"/>
     </bean>
 </beans>
